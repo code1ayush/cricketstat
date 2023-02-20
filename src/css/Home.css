@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* logo  */
+
+ .main-logo{
+    height: 3.3rem;
+    margin-left: 2rem;
+}
+
+.nav-header{
+    background-color: #f4205f;
+    height: 3.3rem;
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.nav-link{
+    margin: 0 2.7vw;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover{
+    color: black;
+} 
+
+ 
+
+/* after navbar */
+
+.home-page1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh-3.3rem;
+}
+
+.sub-page1{
+    display: flex;
+    margin: 6rem 0 ;
+    margin-left: 9rem;
+}
+
+.match-img{
+    height: 50vh;
+    animation: anim 0.5s ease-in 1 ; 
+}
+
+@keyframes anim {
+    0% {
+        margin-left: -43rem;
+    }
+
+    100% {
+        margin-left: 0rem;
+    }
+}
+
+.sub-page2 {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 0;
+    margin-left: 8rem;
+    max-width: 25rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sub-page2>h4 {
+margin-top: 2rem;
+font-size: 1.3rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 600;
+}
+
+.live-btn{
+    width: 8rem;
+    height: 3rem;
+    background-color: #f4205f;
+    border: none;
+    color: white;
+    border-radius:.3rem ;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 4px 4px 5px rgb(211, 205, 205);
+    transition: 0.5s;
+}
+
+.live-btn:hover{
+    border: 2px solid #f4205f;
+    color: #f4205f;
+    background-color: white;
+    cursor: pointer;
+}
+
+.home-page2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 90vh;
+}
+
+.player-img {
+    height: 50vh;
+    margin-left: -5rem;
+    animation: anim 0.5s ease-in 1;
+}
+
+
+.nav-btn{ 
+    border: none;
+    background-color: #f4205f;
+    color: white;
+    font-size: 1.1rem;
+} 
+
+.nav-btn:hover{
+    color:black;
+    cursor: pointer;
+}
