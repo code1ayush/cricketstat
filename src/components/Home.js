@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import matchImage from "../assets/matches.svg";
+import matchImage from "../assets/matches.png";
 import playerImage from "../assets/player.svg";
 import recordImage from "../assets/records.svg";
 import rankingImage from "../assets/rankings.svg";
