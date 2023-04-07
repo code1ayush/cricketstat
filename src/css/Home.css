@@ -51,8 +51,8 @@
 }
 
 .visible {
-    /* background-color: rgba(254, 254, 254, 0.97); */
-    background-color: red;
+    background-color: rgba(254, 254, 254, 0.97);
+    /* background-color: red; */
     height: 90vh;
     width: 100%;
     position: fixed;
@@ -166,46 +166,20 @@ list-style-type: none;
      width: 65%;
      margin-left: 3rem;
      padding-top: 4rem;
+     
 }
 
-/* .sub-page1{
-    display: flex;
-    margin: 6rem 0 ;
-    margin-left: 2rem;
-}
-
-.match-img{
-    height: 70vh;
-    animation: anim 0.5s ease-in 1 ; 
-}
-
-.sub-page13{
-    display: flex;
-    margin: 7rem 0 ;
-    margin-left: 8rem;
-}
-
-@keyframes anim {
-    0% {
-        margin-left: -43rem;
-    }
-
-    100% {
-        margin-left: 0rem;
-    }
-}
-
-.sub-page2 {
+.subpage2{
     display: flex;
     flex-direction: column;
-    margin: 13rem 0;
-    margin-left: 8rem;
+    padding-top: 8rem;
     max-width: 25rem;
+    margin-left: 3rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.sub-page2>h4 {
-margin-top: 2rem;
+h4 {
+margin-top: .7rem;
 font-size: 1.3rem;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-weight: 600;
@@ -232,17 +206,6 @@ font-weight: 600;
     cursor: pointer;
 }
 
-.home-page2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 90vh;
-}
-
-.player-img {
-    height: 50vh;
-    margin-left: -5rem;
-    animation: anim 0.5s ease-in 1;
-} */
 
 
 .nav-btn{ 
@@ -259,18 +222,73 @@ font-weight: 600;
     cursor: pointer;
 } 
 
+.hide{
+    display: block;
+}
 
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 800px) {
     .home-page1 {
         grid-template-columns: auto;
-        grid-template-rows: auto auto;
+        grid-template-rows: 50% 50%;
         height: 90vh;
     }
 
     .match-img {
-     width: 100%;
-     padding-top: 3rem;
-    margin-left: 0rem;
+     width: 90%;
+     padding-top: 5rem;
+    margin-left: 1rem;
+
 }
+.subpage2 {
+    padding-top: 2rem;
+    max-width: 100%;
+    padding-left:1rem ;
+    padding-right: 1rem;
+    margin-left: 0;
+}
+
+h4 {
+    margin-top: .7rem;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.h1class{
+    font-size: 2.3rem;
+}
+
+.live-btn {
+    width: 8rem;
+    height: 3rem;
+    background-color: #f4205f;
+    border: none;
+    color: white;
+    border-radius: .3rem;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 4px 4px 5px rgb(211, 205, 205);
+    transition: 0.5s;
+}
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .web-hide {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile-hide {
+        display: none;
+    }
+
 }
