@@ -6,16 +6,17 @@
 
 /* logo  */
 
- .main-logo{
+  .main-logo{
     height: 3.3rem;
-    margin-left: 2rem;
-}
+    margin-left: .5rem;
+} 
 
 .nav-header{
     background-color: #f4205f;
     height: 3.3rem;
-    position:sticky;
+    position:fixed;
     top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,27 +32,157 @@
 
 .nav-link:hover{
     color: black;
-} 
+}  
 
+
+
+/* // mobile view css for the navbar */
+.navdiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #f4205f;
+    height: 10vh;
+}
+
+.visible {
+    /* background-color: rgba(254, 254, 254, 0.97); */
+    background-color: red;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
+    top: 10vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.ul-list {
+    margin-top: -5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    list-style-type: none;
+    
+}
+
+li {
+    padding: 0.5rem;
+}
+link{
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+    background-color: rgba(254, 254, 254, 0.97);
+    height: 90vh;
+    width: 100%;
+    position: fixed;
+    top: -90vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+    width: 23px;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.ham-btn {
+    border: none;
+    background-color:#f4205f ;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.line.open:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.line.open:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+li{
+list-style-type: none;
+
+}
+
+.pretty{
+    border: none;
+    background-color: white;
+    font-size: 1.3rem;
+    padding: .6rem 0;
+    font-weight: 400;
+}
+.final-list{
+    margin-top: -3rem;
+}
  
+
+/* .link-btn{
+    border: none;
+    text-decoration: none;
+} */
 
 /* after navbar */
 
 .home-page1{
+    height: 90vh;
+    position: relative;
+    top: 10vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 100vh-3.3rem;
 }
 
-.sub-page1{
+.match-img {
+     width: 65%;
+     margin-left: 3rem;
+     padding-top: 4rem;
+}
+
+/* .sub-page1{
     display: flex;
     margin: 6rem 0 ;
-    margin-left: 9rem;
+    margin-left: 2rem;
 }
 
 .match-img{
-    height: 50vh;
+    height: 70vh;
     animation: anim 0.5s ease-in 1 ; 
+}
+
+.sub-page13{
+    display: flex;
+    margin: 7rem 0 ;
+    margin-left: 8rem;
 }
 
 @keyframes anim {
@@ -67,7 +198,7 @@
 .sub-page2 {
     display: flex;
     flex-direction: column;
-    margin: 10rem 0;
+    margin: 13rem 0;
     margin-left: 8rem;
     max-width: 25rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -111,7 +242,7 @@ font-weight: 600;
     height: 50vh;
     margin-left: -5rem;
     animation: anim 0.5s ease-in 1;
-}
+} */
 
 
 .nav-btn{ 
@@ -121,7 +252,25 @@ font-weight: 600;
     font-size: 1.1rem;
 } 
 
+
+
 .nav-btn:hover{
     color:black;
     cursor: pointer;
+} 
+
+
+
+@media only screen and (max-width: 600px) {
+    .home-page1 {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        height: 90vh;
+    }
+
+    .match-img {
+     width: 100%;
+     padding-top: 3rem;
+    margin-left: 0rem;
+}
 }

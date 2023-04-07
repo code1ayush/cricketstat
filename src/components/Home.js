@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import NavbarMobile from "./NavbarMobile";
 import matchImage from "../assets/matches.png";
 import playerImage from "../assets/player.svg";
 import recordImage from "../assets/records.svg";
@@ -9,8 +10,9 @@ import { Link } from "react-router-dom";
 const Home = ({ liveScore, submit2, submitrank }) => {
   return (
     <>
-      <Navbar liveScore={liveScore} submit2={submit2} submitrank={submitrank} />
-      <div className="home-page1">
+      {/* <Navbar liveScore={liveScore} submit2={submit2} submitrank={submitrank} /> */}
+      <NavbarMobile />
+      {/* <div className="home-page1">
         <div className="sub-page1">
           <img src={matchImage} alt="image" className="match-img" />
         </div>
@@ -23,8 +25,24 @@ const Home = ({ liveScore, submit2, submitrank }) => {
             </button>
           </Link>
         </div>
+      </div> */}
+      {/* <div className="home-page1">hello</div> */}
+      <div className="home-page1">
+        <div className="subpage1">
+          <img src={matchImage} alt="image" className="match-img" />
+        </div>
+        <div className="subpage2">
+          {" "}
+          <h1>Bringing the game to you, every ball of the way.</h1>
+          <h4>Catch the action live!</h4>
+          <Link to="/profile">
+            <button className="live-btn" onClick={liveScore}>
+              Live Matches
+            </button>
+          </Link>
+        </div>
       </div>
-      <div className="home-page2">
+      {/* <div className="home-page2">
         <div className="sub-page2">
           <h1>Uncovering the player behind the statistics</h1>
           <h4>Get to know the ace behind the crease</h4>
@@ -32,7 +50,7 @@ const Home = ({ liveScore, submit2, submitrank }) => {
             <button className="live-btn">Player Profile</button>
           </Link>
         </div>
-        <div className="sub-page1">
+        <div className="sub-page13">
           <img src={playerImage} alt="player" className="player-img" />
         </div>
       </div>
@@ -62,10 +80,10 @@ const Home = ({ liveScore, submit2, submitrank }) => {
             </button>
           </Link>
         </div>
-        <div className="sub-page1">
+        <div className="sub-page13">
           <img src={rankingImage} alt="player" className="player-img" />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
