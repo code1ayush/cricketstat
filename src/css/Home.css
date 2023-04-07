@@ -47,7 +47,7 @@
     width: 100%;
     z-index: 9;
     background-color: #f4205f;
-    height: 7vh;
+    height: 10vh;
 }
 
 .visible {
@@ -287,6 +287,19 @@ h4 {
     margin-left: 7rem;
     padding-top: 2rem;
 
+}
+
+.navdiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #f4205f;
+    height: 7vh;
 }
 
 
