@@ -4,7 +4,7 @@ import NavbarMobile from "./NavbarMobile";
 import matchImage from "../assets/matches.png";
 import playerImage from "../assets/player.svg";
 import recordImage from "../assets/records.svg";
-import rankingImage from "../assets/rankings.svg";
+import rankingImage from "../assets/rankings.png";
 import { Link } from "react-router-dom";
 
 const Home = ({ liveScore, submit2, submitrank }) => {
@@ -44,7 +44,11 @@ const Home = ({ liveScore, submit2, submitrank }) => {
 
       <div className="home-page1">
         <div className="subpage1">
-          <img src={playerImage} alt="image" className="match-img" />
+          <img
+            src="https://www.kindpng.com/picc/m/133-1330241_cricket-batsman-png-transparent-png.png"
+            alt="image"
+            className="match-img"
+          />
         </div>
         <div className="subpage2">
           {" "}
@@ -60,7 +64,11 @@ const Home = ({ liveScore, submit2, submitrank }) => {
 
       <div className="home-page1">
         <div className="subpage1">
-          <img src={recordImage} alt="image" className="match-img" />
+          <img
+            src="https://www.pngkey.com/png/detail/28-280400_vector-free-stock-and-bat-png-transparent-images.png"
+            alt="image"
+            className="match-img"
+          />
         </div>
         <div className="subpage2">
           <h1 className="h1class">
@@ -77,7 +85,7 @@ const Home = ({ liveScore, submit2, submitrank }) => {
 
       <div className="home-page1">
         <div className="subpage1">
-          <img src={rankingImage} alt="image" className="match-img" />
+          <img src={rankingImage} alt="image" className="ranking-img" />
         </div>
         <div className="subpage2">
           <h1 className="h1class">
