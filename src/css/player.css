@@ -7,6 +7,7 @@
 .main-container{
     padding-top: 12vh;
     width: 100vw;
+    
 }
 
 .pretty2{
@@ -186,11 +187,12 @@
     background-color: white;
     border-radius: .5rem;
     padding: .5rem;
+    margin: 1rem 0;
 
 }
 
 .mini-container {
-     display: flex;
+display: flex;
   justify-content: space-between;
 
 }
