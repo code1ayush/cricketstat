@@ -4,12 +4,19 @@ import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import noMatch from "../assets/nomatch.svg";
 import "../css/player.css";
+import "../css/Home.css";
+import NavbarMobile from "./NavbarMobile";
 
 const Matches = ({ live, liveScore }) => {
   console.log(live);
   return (
     <>
-      <Navbar />
+      <div className="web-hide">
+        <Navbar />
+      </div>
+      <div className="mobile-hide">
+        <NavbarMobile />
+      </div>
       <div className="main-container">
         {live.Stages ? (
           <div className="live-container1">

@@ -10,13 +10,19 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import player1Image from "../assets/player1.svg";
 import "../css/player.css";
+import NavbarMobile from "./NavbarMobile";
 
 const Player = ({ id, getId, players, handlePlayer, batting, info }) => {
   console.log(batting);
 
   return (
     <div>
-      <Navbar />
+      <div className="web-hide">
+        <Navbar />
+      </div>
+      <div className="mobile-hide">
+        <NavbarMobile />
+      </div>
       <div className="search-container">
         <div className="sub-search">
           <input
@@ -38,6 +44,7 @@ const Player = ({ id, getId, players, handlePlayer, batting, info }) => {
           </button>
         </div>
       </div>
+
       <Typography>
         <div className="batting-container">
           {info ? (

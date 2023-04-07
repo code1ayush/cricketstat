@@ -51,8 +51,8 @@
 }
 
 .visible {
-    background-color: rgba(254, 254, 254, 0.97);
-    /* background-color: red; */
+    /* background-color: rgba(254, 254, 254, 0.97); */
+    background-color: red;
     height: 90vh;
     width: 100%;
     position: fixed;

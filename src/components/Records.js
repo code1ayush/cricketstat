@@ -46,7 +46,7 @@ function Record({
   loading,
 }) {
   const drawer = (
-    <div>
+    <div className="pretty2">
       <Toolbar />
       <div className="drawer">
         <div>
@@ -197,142 +197,146 @@ function Record({
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-          backgroundColor: { sm: "#f1305f" },
-          fontSize: { sm: "1.4" },
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+    <div className="pretty2">
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
+          sx={{
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            ml: { sm: `${drawerWidth}px` },
+            backgroundColor: { sm: "#f1305f" },
+            fontSize: { sm: "1.4" },
+          }}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Records
+              <Link to="/">
+                <AiOutlineHome className="home-nav" />
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
+        >
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Records
-            <Link to="/">
-              <AiOutlineHome className="home-nav" />
-            </Link>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
+            {drawer}
+          </Drawer>
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+            open
+          >
+            {drawer}
+          </Drawer>
+        </Box>
+        <Box
+          component="random"
           sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
+            flexGrow: 1,
+            p: 3,
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
           }}
         >
-          {drawer}
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box
-        component="random"
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-        <Toolbar />
-        <Typography>
-          <div className="record-container">
-            <TableContainer component={Paper} className="table-container">
-              <Table sx={{ minWidth: 350 }} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>
-                      {record ? (
-                        <div className="head">
-                          {[record].flat().map((items) => {
-                            return (
-                              <article className="headers">
-                                #ID
-                                {items.headers.map((item) => {
-                                  return (
-                                    <article className="iheaders">
-                                      {item}
-                                    </article>
-                                  );
-                                })}
-                              </article>
-                            );
-                          })}
-                        </div>
-                      ) : (
-                        []
-                      )}
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-
-                <TableBody>
-                  {record ? (
-                    <div>
-                      {record.values.map((item) => {
-                        return (
-                          <article className="values">
-                            {item.values.map((person) => {
+          <Toolbar />
+          <Typography>
+            <div className="record-container">
+              <TableContainer component={Paper} className="table-container">
+                <Table sx={{ minWidth: 350 }} aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>
+                        {record ? (
+                          <div className="head">
+                            {[record].flat().map((items) => {
                               return (
-                                <TableCell>
-                                  <article className="ivalues">
-                                    {person}
-                                  </article>
-                                </TableCell>
+                                <article className="headers">
+                                  #ID
+                                  {items.headers.map((item) => {
+                                    return (
+                                      <article className="iheaders">
+                                        {item}
+                                      </article>
+                                    );
+                                  })}
+                                </article>
                               );
                             })}
-                          </article>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div>we Ran out of api calls.. please try again later</div>
-                  )}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </div>
-        </Typography>
+                          </div>
+                        ) : (
+                          []
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+
+                  <TableBody>
+                    {record ? (
+                      <div>
+                        {record.values.map((item) => {
+                          return (
+                            <article className="values">
+                              {item.values.map((person) => {
+                                return (
+                                  <TableCell>
+                                    <article className="ivalues">
+                                      {person}
+                                    </article>
+                                  </TableCell>
+                                );
+                              })}
+                            </article>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div>
+                        we Ran out of api calls.. please try again later
+                      </div>
+                    )}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          </Typography>
+        </Box>
       </Box>
-    </Box>
+    </div>
   );
 }
 
