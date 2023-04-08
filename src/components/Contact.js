@@ -3,10 +3,17 @@ import Navbar from "./Navbar";
 import "../css/player.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import NavbarMobile from "./NavbarMobile";
+
 const Contact = () => {
   return (
     <>
-      <Navbar />
+      <div className="web-hide">
+        <Navbar />
+      </div>
+      <div className="mobile-hide">
+        <NavbarMobile />
+      </div>
       <div className="record-containers">
         <div className="record-container2s">
           <h1 className="cont-heading">Contact Us</h1>

@@ -40,7 +40,7 @@ const Player = ({ id, getId, players, handlePlayer, batting, info }) => {
             onClick={getId}
             className="player-btn"
           >
-            Sumbit
+            Submit
           </button>
         </div>
       </div>

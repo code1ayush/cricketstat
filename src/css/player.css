@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+.aboutpart{
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.desc{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 1rem;
+}
+
 .main-container{
     padding-top: 12vh;
     width: 100vw;
@@ -89,6 +102,7 @@
 
 
 .record-containers {
+    margin-top: 9vh;
     min-height: 91vh;
     display: flex;
     justify-content: center;
