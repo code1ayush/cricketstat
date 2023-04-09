@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
-import noMatch from "../assets/nomatch.svg";
+import noMatch from "../assets/nomatch.gif";
 import "../css/player.css";
 import "../css/Home.css";
 import NavbarMobile from "./NavbarMobile";
@@ -95,10 +95,6 @@ const Matches = ({ live, liveScore }) => {
         ) : (
           <div className="no-match1">
             <img src={noMatch} alt="" className="no-match" />
-            <p>Currently no live matches present....</p>
-            <p>
-              Back <Link to="/">Home</Link>
-            </p>
           </div>
         )}
       </div>
