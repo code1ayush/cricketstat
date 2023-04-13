@@ -51,7 +51,14 @@ const About = () => {
           <div
             style={{ fontSize: "2rem", textAlign: "end", marginTop: "1rem" }}
           >
-            ~Ayush Kumar
+            ~Ayush Kumar <br />
+            <a
+              style={{ fontSize: "1rem" }}
+              href="https//github.com/code1ayush"
+              target="_blank"
+            >
+              Github
+            </a>
           </div>
         </div>
       </div>

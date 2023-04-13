@@ -90,7 +90,7 @@ const Home = ({ liveScore, submit2, submitrank }) => {
         </div>
       </Fade>
 
-      <Fade direction="right" triggerOnce="true" delay="10">
+      <Fade direction="left" triggerOnce="true" delay="10">
         <div className="home-page1">
           <div className="subpage1">
             <img src={rankingImage} alt="image" className="ranking-img" />
