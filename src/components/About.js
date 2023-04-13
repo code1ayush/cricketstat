@@ -54,7 +54,7 @@ const About = () => {
             ~Ayush Kumar <br />
             <a
               style={{ fontSize: "1rem" }}
-              href="https//github.com/code1ayush"
+              href="https://github.com/code1ayush/cricketstat"
               target="_blank"
             >
               Github
