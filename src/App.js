@@ -34,7 +34,7 @@ function App() {
   const [record, setRecord] = useState("");
   const [type, setType] = useState("mostRuns");
   const [format, setFormat] = useState("1");
-  const [year, setYear] = useState("2023");
+  const [year, setYear] = useState("2024");
   const [team, setTeam] = useState("");
   const [opo, setOpo] = useState("");
   const [loading, setLoading] = useState(true);
