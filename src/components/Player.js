@@ -13,7 +13,7 @@ import "../css/player.css";
 import NavbarMobile from "./NavbarMobile";
 
 const Player = ({ id, getId, players, handlePlayer, batting, info }) => {
-  console.log(batting);
+  
 
   return (
     <div>
@@ -89,9 +89,9 @@ const Player = ({ id, getId, players, handlePlayer, batting, info }) => {
                     <div className="row-header">Test</div>
                     <div className="row-header">Odi</div>
                     <div className="row-header">T20</div>
-                    <div>{info.rankings.bat[0].testRank}</div>
+                    {/* <div>{info.rankings.bat[0].testRank}</div>
                     <div>{info.rankings.bat[0].odiRank}</div>
-                    <div>{info.rankings.bat[0].t20Rank}</div>
+                    <div>{info.rankings.bat[0].t20Rank}</div> */}
                   </div>
                 </div>
               </div>

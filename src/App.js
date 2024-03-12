@@ -28,6 +28,7 @@ function App() {
       .catch((err) => console.error(err));
     setLoading(false);
   };
+  // console.log(info.rankings);
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [record, setRecord] = useState("");
